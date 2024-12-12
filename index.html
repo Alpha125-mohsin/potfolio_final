@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        .header {
+            grid-area: header;
+        }
+
+        .context {
+            grid-area: context;
+        }
+
+        .skills {
+            grid-area: skills;
+        }
+
+        .project {
+            grid-area: project;
+        }
+
+        .form {
+            grid-area: form;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .main {
+            padding: 22px;
+            display: grid;
+            background-color: bisque;
+            gap: 15px;
+            grid-template-areas:
+                'header'
+                'context'
+                'skills'
+                'project'
+                'form'
+                'footer';
+        }
+
+        .main>div {
+            background-color: brown;
+            border-radius: 50px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+        }
+
+        ol {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            flex-wrap: wrap;
+            height: 90px;
+            margin: 20px auto;
+            background-color: brown;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(0, 22, 255, 0.7);
+        }
+
+        li {
+            margin: 0 20px;
+        }
+
+        a {
+            font-size: 1.2em;
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        a:hover {
+            background-color: #333;
+            color: #ffde59;
+            border-radius: 8px;
+        }
+
+        .heading {
+            padding-top: 125px;
+            font-size: 2.5em;
+            color: white;
+            text-shadow: 11px 11px 21px rgba(0, 22, 255, 0.7);
+            text-align: center;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            position: relative;
+            top: -325px;
+
+        }
+
+        .myskills {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+            justify-content: center;
+            background-color: burlywood;
+        }
+
+        .skillsnumber {
+            height: 250px;
+            width: 90%;
+            max-width: 520px;
+            background-color: black;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .form {
+            background-color: burlywood;
+        }
+
+        .form-container {
+            padding-top: 55px;
+            width: 90%;
+            max-width: 430px;
+            min-height: 378px;
+            background-color: floralwhite;
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            background-color: brown;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 10px;
+
+
+        }
+
+        /* Responsive styles for tablets */
+        @media (max-width: 768px) {
+            .main {
+                grid-template-areas:
+                    'header'
+                    'context'
+                    'skills'
+                    'project'
+                    'form'
+                    'footer';
+            }
+
+            .heading {
+                font-size: 2em;
+                padding-top: 70px;
+            }
+
+            .context p {
+                font-size: 1.2em;
+                width: 90%;
+                margin: 20px auto;
+                line-height: 1.5;
+                text-align: center;
+            }
+
+            .skillsnumber,
+            .form-container {
+                width: 100%;
+            }
+        }
+
+        /* Responsive styles for Mobiles */
+        @media (max-width: 460px) {
+            .heading {
+                font-size: 1.8em;
+                padding-top: 50px;
+            }
+
+            .form-container {
+                max-height: auto;
+                max-width: 250px;
+            }
+
+            .context p {
+                font-size: 1em;
+            }
+
+            ol {
+                height: auto;
+                padding: 10px;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+
+            a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header" style="background-color: transparent;">
+            <header>
+                <ol>
+                    <li><a href="#section1">About Me</a></li>
+                    <li><a href="#section2">Skills</a></li>
+                    <li><a href="#section3">Projects</a></li>
+                    <li><a href="#section4">Let's join</a></li>
+                </ol>
+            </header>
+        </div>
+
+        <div class="context" id="section1">
+            <h4 class="heading">About me</h4>
+            <p
+                style="color: wheat; font-size: 1.5em; line-height: 1.5; font-family: 'Dancing Script', cursive; text-align: center;">
+                I'm Mohsin Malik, a passionate Flutter Developer and Software Engineer with expertise in building
+                intuitive mobile and web applications. With a strong background in full-stack development, web scraping,
+                and teaching, I enjoy creating impactful digital solutions. Currently exploring Web 3.0 and AI, I'm
+                committed to driving innovation in tech. Let's build something amazing together!
+            </p>
+            <div class="image image-container ">
+                <img src="assets/image1.png" alt="Profile picture" />
+            </div>
+            <br>
+        </div>
+
+        <div class="skills" id="section2">
+            <h4 style="text-align: center; font-size: 2em; color: aquamarine; ">Skills</h4>
+            <div class="myskills">
+                <div class="skillsnumber">
+                    <div>
+                        <img src="python.png" />
+                        <span class="overlay-text">Python</span>
+                    </div>
+                </div>
+                <div class="skillsnumber">
+                    <div>
+                        <img src="flut.png" />
+                        <span class="overlay-text">Flutter</span>
+                    </div>
+                </div>
+                <div class="skillsnumber">
+                    <div>
+                        <img src="assets/web.png" />
+                        <span class="overlay-text">Web Development</span>
+                    </div>
+                </div>
+                <div class="skillsnumber">
+                    <div>
+                        <img src="assets/ai.png" />
+                        <span class="overlay-text">AI</span>
+                    </div>
+                </div>
+                <div class="skillsnumber">
+                    <div>
+                        <img src="assets/web3.png" />
+                        <span class="overlay-text"></span>
+                    </div>
+                </div>
+                <div class="skillsnumber">
+                    <div>
+                        <img src="assets/js.png" />
+                        <span class="overlay-text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="project" id="section3">
+            <h4 style="text-align: center; font-size: 2em; color: aquamarine;">Projects</h4>
+            <div class="myskills">
+                <div class="skillsnumber">
+                    <div class="image-container">
+                        <video src="assets/ffd.mp4" controls style="width: 100%; height: auto;"></video>
+                        <span class="overlay-text">FFD APP</span>
+                    </div>
+                </div>
+                <div class="skillsnumber">
+                    <div class="image-container">
+                        <video src="assets/ffd.mp4" controls style="width: 100%; height: auto;"></video>
+                        <span class="overlay-text">Kindle APP</span>
+                    </div>
+                </div>
+                <div class="skillsnumber">
+                    <div class="image-container">
+                        <video src="assets/ffd.mp4" controls style="width: 100%; height: auto;"></video>
+                        <span class="overlay-text">Kindle APP</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="form" id="section4">
+                <h4 style="text-align: center; font-size: 2em; color: aquamarine; position: relative; top: -45px;">form
+                </h4>
+                </Br>
+                <div style="background-color: burlywood;">
+
+                    </Br>
+
+                    <div class="form-container">
+                        <h2>Contact Me</h2>
+
+                        <form>
+                            <div class="form-group">
+                                <label>Name</label>
+                                </Br>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                </Br>
+                                <input type="email">
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                </Br>
+                                <textarea></textarea>
+                            </div>
+                            <div class="form-group">
+                                </br>
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    </br></br>
+                </div>
+            </div>
+
+            <div class="footer">
+                ©️ Copyright <span>Developed by Rock</span>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
